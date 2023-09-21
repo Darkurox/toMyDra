@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+    background: linear-gradient(70deg, rgb(182, 203, 251), rgb(82, 168, 229), rgb(74, 252, 202));
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px; /* Tamaño de fuente reducido para dispositivos móviles */
+}
+
+.Con-2 {
+    display: none;
+}
+
+canvas {
+    display: block;
+    max-width: 100%; /* Asegura que el lienzo no sea más ancho que la pantalla */
+    margin: 0 auto; /* Centra el lienzo en la pantalla */
+}
+
+.Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    margin: 0;
+    flex-direction: column; /* Centra verticalmente en dispositivos móviles */
+}
+
+.Con {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en dispositivos móviles */
+}
+
+.Texto {
+    display: none;
+}
+
+.Texto h2 {
+    font-size: 20px; /* Tamaño de fuente reducido para dispositivos móviles */
+}
+
+#B12 {
+    margin-left: 10px; /* Espaciado reducido para dispositivos móviles */
+}
+
+.Button {
+    font-family: monospace;
+    font-size: large; /* Tamaño de fuente reducido para dispositivos móviles */
+    transition-duration: 0.2s;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid green;
+    cursor: pointer;
+    margin: 5px; /* Espaciado entre botones en dispositivos móviles */
+}
+
+.Button:hover {
+    transform: scale(1.1);
+    border-radius: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: black;
+    background-color: white;
+}
+
+.Contenedor-Binicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Con-Emergente {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Centra el contenido en dispositivos móviles */
+}
+
+.cua {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ancho del cuadro ajustado para dispositivos móviles */
+    max-width: 300px; /* Ancho máximo para evitar que se extienda demasiado en dispositivos grandes */
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        background: linear-gradient(100deg, rgb(182, 203, 251), rgb(82, 168, 229), rgb(74, 252, 202));
+    }
+    
+    h1 {
+        font-size: 24px; /* Tamaño de fuente reducido para dispositivos móviles */
+    }
+}
